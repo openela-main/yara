@@ -1,5 +1,5 @@
 Name:           yara
-Version:        4.2.3
+Version:        4.5.2
 Release:        1%{?dist}
 Summary:        Pattern matching Swiss knife for malware researchers
 
@@ -28,7 +28,6 @@ BuildRequires:  file
 BuildRequires:  gawk
 BuildRequires:  gzip
 BuildRequires:  xz
-BuildRequires:  pcre
 BuildRequires:  bison
 BuildRequires:  flex
 BuildRequires:  libtool
@@ -128,6 +127,10 @@ rm -f %{buildroot}%{_datadir}/doc/%{name}/html/.buildinfo
 
 
 %changelog
+* Wed Oct 9 2024 Mark Huth <mhuth@redhat.com> - 4.5.2-1
+- bump to 4.5.2
+- remove pcre build dependency
+
 * Tue Aug 16 2022 Mark Huth <mhuth@redhat.com> - 4.2.3-1
 - Bump to 4.2.3
 - Remove androguard module - github repo no longer exists
